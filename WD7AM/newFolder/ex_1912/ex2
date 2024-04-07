@@ -1,0 +1,18 @@
+# # Open a file for writing (if the file doesn't exist, it will be created)
+# a = "heello"
+# with open('output.txt', 'w') as file:
+#     # Your loop logic here
+#     for i in (a):
+#         # Replace this line with the actual output you want to write
+#         output_line = f'This is line {i}\n'
+
+#         # Write the output to the file
+#         file.write(output_line)
+#         f"value{i}value{output_line}"
+        
+# # The file will be automatically closed when the 'with' block is exited
+a = "hello"
+b = "worrld"
+
+for i in (a,b):
+    print(a[i],b[i])

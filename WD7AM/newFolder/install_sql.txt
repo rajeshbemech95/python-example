@@ -1,0 +1,13 @@
+1. Install mysql connector
+
+pip install mysql-connector-python
+
+2. Install XAMPP (mysql web application)
+
+https://www.apachefriends.org/download.html
+
+
+After installation
+1. Start Appache web server
+2. Start mysql
+3. Goto browser and enter 127.0.0.1 or localhost

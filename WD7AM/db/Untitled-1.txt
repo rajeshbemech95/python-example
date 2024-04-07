@@ -1,0 +1,4 @@
+xampp download:  https://www.apachefriends.org/download.html
+sql connector download : https://pypi.org/project/mysql-connector-python/
+sql (optional) : https://dev.mysql.com/downloads/installer/
+loaclhost  : 127.0.0.1

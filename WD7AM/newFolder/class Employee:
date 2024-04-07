@@ -1,0 +1,79 @@
+class Employee:
+    def __init__(self, emp_id, name, department):
+        self.emp_id = emp_id
+        self.name = name
+        self.department = department
+
+class Department:
+    def __init__(self, name):
+        self.name = name
+        self.employees = []
+
+    def add_employee(self, employee):
+        self.employees.append(employee)
+
+    def get_employees(self):
+        return self.employees
+
+class Company:
+    def __init__(self, name):
+        self.name = name
+        self.departments = {}
+
+    def add_department(self, department):
+        self.departments[department.name] = department
+
+    def add_employee_to_department(self, employee, department_name):
+        if department_name in self.departments:
+            self.departments[department_name].add_employee(employee)
+        else:
+            print(f"Error: Department '{department_name}' does not exist.")
+
+# Example Usage
+if __name__ == "__main__":
+    # Creating employees
+    emp1 = Employee(1, "John Doe", "HR")
+    emp2 = Employee(2, "Jane Smith", "IT")
+    emp3 = Employee(3, "Bob Johnson", "Finance")
+    emp4 = Employee(4, "Alice Brown", "HR")
+
+    # Creating departments
+    hr_department = Department("HR")
+    it_department = Department("IT")
+    finance_department = Department("Finance")
+
+    # Adding employees to departments
+    hr_department.add_employee(emp1)
+    hr_department.add_employee(emp4)
+    it_department.add_employee(emp2)
+    finance_department.add_employee(emp3)
+
+    # Creating a company
+    my_company = Company("ABC Corp")
+
+    # Adding departments to the company
+    my_company.add_department(hr_department)
+    my_company.add_department(it_department)
+    my_company.add_department(finance_department)
+
+    # Adding an employee directly to a department
+    emp5 = Employee(5, "Sam Wilson", "IT")
+    my_company.add_employee_to_department(emp5, "IT")
+
+    # Retrieving employees in a department
+    hr_employees = my_company.departments["HR"].get_employees()
+    it_employees = my_company.departments["IT"].get_employees()
+    finance_employees = my_company.departments["Finance"].get_employees()
+
+    # Displaying employee details
+    print("HR Department Employees:")
+    for employee in hr_employees:
+        print(f"Employee ID: {employee.emp_id}, Name: {employee.name}")
+
+    print("\nIT Department Employees:")
+    for employee in it_employees:
+        print(f"Employee ID: {employee.emp_id}, Name: {employee.name}")
+
+    print("\nFinance Department Employees:")
+    for employee in finance_employees:
+        print(f"Employee ID: {employee.emp_id}, Name: {employee.name}")

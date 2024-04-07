@@ -1,0 +1,26 @@
+Databas =>       HTTP       <=machine/laptop/android
+
+                                GET  
+                                PUT 
+                                POST 
+                                DELETE 
+
+                                ||  
+                                APIAPI integration / access / Create
+
+REST =  Represational State Transfer Application Programming Interface
+
+databse/server(localhost) =>      python connector       <=machine/laptop/android
+
+                                open  
+                                edit
+                                commit 
+                                close
+
+                                
+
+
+
+
+
+                            
